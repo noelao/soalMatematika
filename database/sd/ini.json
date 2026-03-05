@@ -1,14 +1,82 @@
 [
   {
     "id": 1,
-    "question": "Gradien garis yang melalui titik (2, 3) dan (4, 7) adalah...",
-    "options": ["1/2", "4", "2", "-2"],
-    "answer": "2"
+    "soal": "Hasil dari $1.250 + 200 \times 4 - 500$ adalah...",
+    "pilihan": ["1.550", "5.300", "1.450", "1.650"],
+    "jawaban": "1.550",
+    "petunjuk": "Ingat aturan Kabataku: kerjakan perkalian terlebih dahulu sebelum penjumlahan dan pengurangan.",
+    "penjelasan": "Langkah pertama adalah perkalian: $200 \\times 4 = 800$. Kemudian operasi penjumlahan dan pengurangan: $1.250 + 800 - 500 = 2.050 - 500 = 1.550$."
   },
   {
     "id": 2,
-    "question": "Jika $3x + 5 = 2x - 7$, maka nilai $x$ adalah...",
-    "options": ["-12", "12", "-2", "2"],
-    "answer": "-12"
+    "soal": "KPK (Kelipatan Persekutuan Terkecil) dari 12 dan 15 adalah...",
+    "pilihan": ["30", "45", "60", "90"],
+    "jawaban": "60",
+    "petunjuk": "Cari bilangan terkecil yang bisa habis dibagi oleh 12 dan sekaligus habis dibagi oleh 15.",
+    "penjelasan": "Kelipatan 12: 12, 24, 36, 48, 60... Kelipatan 15: 15, 30, 45, 60... Bilangan sama yang pertama kali bertemu adalah 60."
+  },
+  {
+    "id": 3,
+    "soal": "Bentuk paling sederhana dari pecahan $\\frac{24}{32}$ adalah...",
+    "pilihan": ["$\\frac{2}{3}$", "$\\frac{3}{4}$", "$\\frac{4}{5}$", "$\\frac{6}{8}$"],
+    "jawaban": "$\\frac{3}{4}$",
+    "petunjuk": "Bagi pembilang dan penyebut dengan FPB dari 24 dan 32 (angka 8).",
+    "penjelasan": "FPB dari 24 dan 32 adalah 8. Jadi, $24 : 8 = 3$ dan $32 : 8 = 4$. Hasilnya adalah $\\frac{3}{4}$."
+  },
+  {
+    "id": 4,
+    "soal": "Sebuah persegi memiliki sisi 12 cm. Luas persegi tersebut adalah...",
+    "pilihan": ["24 $cm^2$", "48 $cm^2$", "144 $cm^2$", "120 $cm^2$"],
+    "jawaban": "144 $cm^2$",
+    "petunjuk": "Rumus luas persegi adalah sisi dikali sisi ($s \\times s$).",
+    "penjelasan": "Luas = $12 \\text{ cm} \\times 12 \\text{ cm} = 144 \\text{ cm}^2$."
+  },
+  {
+    "id": 5,
+    "soal": "Hasil dari $\\frac{1}{2} + 0,25$ dalam bentuk desimal adalah...",
+    "pilihan": ["0,50", "0,75", "1,25", "0,30"],
+    "jawaban": "0,75",
+    "petunjuk": "Ubah $\\frac{1}{2}$ menjadi desimal terlebih dahulu (0,5) lalu jumlahkan.",
+    "penjelasan": "$\\frac{1}{2} = 0,5$. Maka, $0,5 + 0,25 = 0,75$."
+  },
+  {
+    "id": 6,
+    "soal": "FPB (Faktor Persekutuan Terbesar) dari 18 dan 24 adalah...",
+    "pilihan": ["2", "3", "6", "9"],
+    "jawaban": "6",
+    "petunjuk": "Cari bilangan terbesar yang bisa membagi habis angka 18 dan 24.",
+    "penjelasan": "Faktor 18: 1, 2, 3, 6, 9, 18. Faktor 24: 1, 2, 3, 4, 6, 8, 12, 24. Faktor terbesar yang sama adalah 6."
+  },
+  {
+    "id": 7,
+    "soal": "Sebuah lingkaran memiliki jari-jari 7 cm. Keliling lingkaran tersebut adalah... ($\\pi = \\frac{22}{7}$)",
+    "pilihan": ["22 cm", "44 cm", "154 cm", "88 cm"],
+    "jawaban": "44 cm",
+    "petunjuk": "Gunakan rumus keliling lingkaran $2 \\times \\pi \\times r$.",
+    "penjelasan": "Keliling = $2 \\times \\frac{22}{7} \\times 7 = 2 \\times 22 = 44 \\text{ cm}$."
+  },
+  {
+    "id": 8,
+    "soal": "Data nilai ulangan Matematika: 7, 8, 6, 8, 9. Rata-rata (mean) nilai tersebut adalah...",
+    "pilihan": ["7,0", "7,2", "7,6", "8,0"],
+    "jawaban": "7,6",
+    "petunjuk": "Jumlahkan semua nilai, lalu bagi dengan banyaknya data (5).",
+    "penjelasan": "Total nilai = $7 + 8 + 6 + 8 + 9 = 38$. Rata-rata = $38 : 5 = 7,6$."
+  },
+  {
+    "id": 9,
+    "soal": "Hasil dari $3^3 + \\sqrt{64}$ adalah...",
+    "pilihan": ["17", "35", "11", "25"],
+    "jawaban": "35",
+    "petunjuk": "Hitung pangkat tiga dari 3 dan akar kuadrat dari 64 secara terpisah.",
+    "penjelasan": "$3^3 = 3 \\times 3 \\times 3 = 27$. $\\sqrt{64} = 8$. Maka, $27 + 8 = 35$."
+  },
+  {
+    "id": 10,
+    "soal": "Budi membeli 3 buku seharga Rp 12.000. Jika ia membeli 5 buku, ia harus membayar...",
+    "pilihan": ["Rp 15.000", "Rp 18.000", "Rp 20.000", "Rp 25.000"],
+    "jawaban": "Rp 20.000",
+    "petunjuk": "Cari harga 1 buku terlebih dahulu, lalu kalikan dengan 5.",
+    "penjelasan": "Harga 1 buku = $12.000 : 3 = 4.000$. Harga 5 buku = $4.000 \\times 5 = 20.000$."
   }
 ]

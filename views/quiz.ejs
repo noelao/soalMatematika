@@ -1,34 +1,95 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
 <style>
     .wrapper {
-        
+        font-family: 'Inter', sans-serif;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 10px;
+    }
+    .pertanyaan {
+        margin-bottom: 30px;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+    .soal {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    .pilihan {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Jarak antar pilihan */
+    }
+    .pilih {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .pilih:hover {
+        background-color: #f0f8ff;
+        border-color: #007bff;
     }
 </style>
 
 <div class="wrapper">
-    
-
+    <div id="loading">Memuat soal...</div>
 </div>
 
 
 <script>
-    getQuestions();
-    async function getQuestions() {
-        const level = "<%= level %>";
-        const wrapper = document.querySelector(".wrapper");
-        try {
-            const response = await fetch(`/api/questions/${level}`);
-            if(!response.ok){
-                throw new Error("Gagal mengambil pertanyaan");
-            }
-            const data = await response.json();
-            console.log(data);
-            wrapper.innerHTML = data;
-            
+    // Pastikan fungsi ini berada di dalam tag <script> paling bawah
+async function getQuestions() {
+    const level = "<%= level %>";
+    const wrapper = document.querySelector(".wrapper");
     
-        } catch (error) {
-            console.error("Terjadi kesalahan:", error);        
-        } finally {
-    
-        }
+    try {
+        const response = await fetch(`/api/questions/${level}`);
+        const data = await response.json();
+
+        // Map data ke HTML
+        const htmlSoal = data.map((ini, i) => {
+            const pilihan = ini.pilihan.map(itu => `<div class="pilih">${itu}</div>`).join("");
+            return `
+                <div class="pertanyaan">
+                    <div class="soal">${i + 1}. ${ini.soal}</div>
+                    <div class="pilihan">${pilihan}</div>
+                </div>`;
+        }).join("");
+
+        // Masukkan ke DOM
+        wrapper.innerHTML = htmlSoal;
+
+        // EKSEKUSI KATEX SECARA PAKSA
+        renderMatematika();
+
+    } catch (error) {
+        console.error("Gagal load:", error);
     }
+}
+
+function renderMatematika() {
+    if (typeof renderMathInElement === 'function') {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            throwOnError: false
+        });
+    } else {
+        // Jika library belum siap, tunggu 200ms lalu coba lagi
+        setTimeout(renderMatematika, 200);
+    }
+}
+
+// Jalankan saat halaman siap
+window.addEventListener('DOMContentLoaded', getQuestions);
 </script>
