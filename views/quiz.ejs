@@ -1,0 +1,34 @@
+<style>
+    .wrapper {
+        
+    }
+</style>
+
+<div class="wrapper">
+    
+
+</div>
+
+
+<script>
+    getQuestions();
+    async function getQuestions() {
+        const level = "<%= level %>";
+        const wrapper = document.querySelector(".wrapper");
+        try {
+            const response = await fetch(`/api/questions/${level}`);
+            if(!response.ok){
+                throw new Error("Gagal mengambil pertanyaan");
+            }
+            const data = await response.json();
+            console.log(data);
+            wrapper.innerHTML = data;
+            
+    
+        } catch (error) {
+            console.error("Terjadi kesalahan:", error);        
+        } finally {
+    
+        }
+    }
+</script>

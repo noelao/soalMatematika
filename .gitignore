@@ -1,0 +1,34 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Environment variables (Sangat penting jika kamu pakai .env nanti)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE/Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build outputs (Jika nanti pakai Next.js atau bundler lain)
+dist/
+build/
+.next/
+
+# Database local (Jika ada sqlite atau log database)
+*.sqlite
+*.log

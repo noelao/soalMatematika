@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "question": "Gradien garis yang melalui titik (2, 3) dan (4, 7) adalah...",
+    "options": ["1/2", "4", "2", "-2"],
+    "answer": "2"
+  },
+  {
+    "id": 2,
+    "question": "Jika $3x + 5 = 2x - 7$, maka nilai $x$ adalah...",
+    "options": ["-12", "12", "-2", "2"],
+    "answer": "-12"
+  }
+]

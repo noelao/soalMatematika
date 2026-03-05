@@ -1,0 +1,15 @@
+{
+  "name": "jawabsoalmatematika",
+  "version": "1.0.0",
+  "description": "menjadi penjawab",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "randong",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  }
+}
